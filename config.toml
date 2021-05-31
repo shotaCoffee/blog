@@ -1,6 +1,6 @@
 baseURL = "https://shotacoffee.github.io/blog/"
 languageCode = "ja"
-title = "My New Hugo Site"
+title = "shotaCoffee"
 theme = "harbor"
 publishDir = "docs"
 canonifyurls = true
