@@ -5,7 +5,7 @@ tags = ["test tag"]
 draft = false
 toc = false
 backtotop = false
-disable_comments = true <!-- disable disqus -->
+disable_comments = true
 +++
 
 # タイトル
