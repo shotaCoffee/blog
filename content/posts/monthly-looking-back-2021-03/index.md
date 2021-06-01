@@ -9,11 +9,6 @@ disable_comments = true
 +++
 # 2021年3月の振り返り
 
-Date: Mar 22, 2021
-Published: Yes
-Slug: monthly-looking-back-2021-03
-keywords: 棚卸し
-
 ## 10年前の目標をコンプリートした
 
 ![images/Untitled.png](images/Untitled.png)
