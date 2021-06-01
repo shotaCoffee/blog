@@ -69,8 +69,11 @@ googleAnalytics = "UA-151064248-1"
 #   url="link to social media"
 #   icon="A icon from https://fontawesome.com/"
 
-# [params.logo]
-#   url = "icon.png" # static/images/icon.png
-#   width = 50
-#   height = 50
-#   alt = "Logo"
+[params]
+favicon = "favicon.ico"
+
+[params.logo]
+url = "logo.svg"
+width = 50
+height = 50
+alt = "Logo"
