@@ -62,12 +62,26 @@ googleAnalytics = "UA-151064248-1"
 #   url = "archives"
 #   weight = 3
 
-# copy paste this block and change for each social media to add how many ever social media
-# acounts/links you want
-# [[params.social]]
-#   name="name of social media"
-#   url="link to social media"
-#   icon="A icon from https://fontawesome.com/"
+
+[[params.social]]
+name= "Twitter"
+url="https://twitter.com/shota_coffee"
+icon="fab fa-twitter"
+
+[[params.social]]
+name= "GitHub"
+url="https://github.com/shotaCoffee"
+icon="fab fa-github"
+
+[[params.social]]
+name= "facebook"
+url="https://www.facebook.com/shotaCoffee"
+icon="fab fa-facebook"
+
+[[params.social]]
+name= "linkedin"
+url="https://www.linkedin.com/in/shota-murakami-40362011b/"
+icon="fab fa-linkedin"
 
 [params]
 favicon = "favicon.ico"
