@@ -4,6 +4,7 @@ title = "codesign"
 contentDir = "post"
 hasCJKLanguage = true
 summaryLength = 80
+publishDir = "docs"
 
 googleAnalytics = "UA-151064248-1"
 
