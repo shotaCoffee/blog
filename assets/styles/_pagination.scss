@@ -1,0 +1,29 @@
+.pagination {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+
+  li + li {
+    margin-left: 1rem;
+  }
+
+  li {
+    a {
+      text-decoration: none;
+      color: $navigation-text;
+    }
+
+    &.active {
+      a {
+        color: $light-blue;
+      }
+    }
+    &.disabled {
+      a {
+        color: $weak-blue;
+      }
+    }
+  }
+}

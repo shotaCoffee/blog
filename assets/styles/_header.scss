@@ -8,6 +8,12 @@
   padding: 0.875rem 1rem;
   align-items: center;
 
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
   h1 {
     line-height: 1;
 

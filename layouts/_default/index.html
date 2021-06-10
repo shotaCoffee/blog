@@ -5,9 +5,10 @@
 {{ define "main" }}
 {{ "<!-- _default/index.html start -->" | safeHTML }}
 <div class="index">
-{{ range .Site.RegularPages -}}
+{{ range .Paginator.Pages -}}
   {{ partial "card.html" . }}
 {{ end -}}
+{{ template "_internal/pagination.html" . }}
 </div>
 {{ partial "profile.html" . }}
 {{ partial "footer.html" . }}

@@ -7,7 +7,6 @@
 
   li {
     display: inline-block;
-    color: $light-blue;
 
     & + li {
       margin-left: 0.25rem;
@@ -15,6 +14,11 @@
 
     &:not(:last-child)::after {
       content: ',';
+    }
+
+    a {
+      color: $light-blue;
+      text-decoration: none;
     }
   }
 }

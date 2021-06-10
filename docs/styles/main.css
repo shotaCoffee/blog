@@ -328,7 +328,9 @@ small,
   font-size: 1.2em; }
   .card-title a {
     cursor: pointer;
-    transition: color 300ms ease; }
+    transition: color 300ms ease;
+    text-decoration: none;
+    color: #707070; }
     .card-title a:hover {
       color: #68bde2; }
 
@@ -379,12 +381,14 @@ small,
   text-indent: 0; }
 
 .categories li {
-  display: inline-block;
-  color: #68bde2; }
+  display: inline-block; }
   .categories li + li {
     margin-left: 0.25rem; }
   .categories li:not(:last-child)::after {
     content: ','; }
+  .categories li a {
+    color: #68bde2;
+    text-decoration: none; }
 
 p {
   margin-bottom: 1.15rem; }
@@ -541,6 +545,10 @@ small,
   margin: 0 auto;
   padding: 0.875rem 1rem;
   align-items: center; }
+  .navigation ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
   .navigation h1 {
     line-height: 1; }
     .navigation h1:hover {
@@ -781,6 +789,22 @@ small,
       margin-top: 0.25rem; }
     .toggle-inner > ul a {
       text-decoration: none; }
+
+.pagination {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem; }
+  .pagination li + li {
+    margin-left: 1rem; }
+  .pagination li a {
+    text-decoration: none;
+    color: #707070; }
+  .pagination li.active a {
+    color: #68bde2; }
+  .pagination li.disabled a {
+    color: #dff0f9; }
 
 /*
 Night Owl for highlight.js (c) Carl Baxter <carl@cbax.tech>
