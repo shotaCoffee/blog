@@ -1,0 +1,16 @@
+{{ define "title" }}
+{{- .Title -}}
+{{ end }}
+
+{{ define "main" }}
+{{ "<!-- _default/list.html start -->" | safeHTML }}
+<div class="index">
+{{ range .Pages -}}
+{{ partial "card.html" . }}
+{{ end -}}
+</div>
+
+{{ partial "profile.html" . }}
+{{ partial "footer.html" . }}
+{{ "<!-- _default/list.html end -->" | safeHTML }}
+{{ end }}

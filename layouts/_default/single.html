@@ -1,0 +1,15 @@
+{{ define "title" }}
+{{- .Title -}}
+{{ end }}
+
+{{ define "main" }}
+{{ "<!-- _default/single.html start -->" | safeHTML }}
+  <div class="post">
+    <div class="post-meta">
+      <div class="posted">{{ .PublishDate.Format "2006.01.02" }}</div>
+      {{ partial "categories.html" . }}
+    </div>
+    {{ .Content }}
+  </div>
+{{ "<!-- _default/single.html end -->" | safeHTML }}
+{{ end }}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{ partial "head.html" .}}
+    <meta charset="utf-8">
+    <title>{{ block "title" . }}{{ end }}</title>
+    {{ template "_internal/google_analytics.html" . }}
+  </head>
+  <body>
+    {{ "<!-- _default/baseof.html start -->" | safeHTML }}
+    {{ partial "header.html" . }}
+    {{ block "main" . }}{{ end }}
+    {{ "<!-- _default/baseof.html end -->" | safeHTML }}
+  </body>
+</html>

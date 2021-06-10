@@ -1,0 +1,23 @@
+.shares {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+
+  button + button,
+  button + a {
+    margin-left: 1rem;
+  }
+}
+
+.hatenaShareButton {
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  color: white;
+  border-radius: 50%;
+  background-color: #00a4de;
+}

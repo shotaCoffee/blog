@@ -1,0 +1,16 @@
+<div class="card">
+  <h3 class="card-title">
+    <a href="{{ .RelPermalink }}">
+      {{ .Title }}
+    </a>
+  </h3>
+  <p class="card-description">
+    {{ .Summary }}
+  </p>
+  <div class="card-meta">
+    <div class="card-posted text-small">
+      {{ .PublishDate.Format "2006.01.02" }}
+    </div>
+    {{ partial "categories.html" . }}
+  </div>
+</div>

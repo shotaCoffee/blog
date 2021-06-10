@@ -1,0 +1,31 @@
+@import 'theme';
+
+.footer {
+  max-width: $max-width;
+  padding: 1.8rem 1rem;
+  margin: 4rem auto 0;
+  color: $footer-text;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    text-decoration: none;
+    color: $footer-text;
+    transition: color 300ms ease;
+
+    &:hover {
+      color: $light-blue;
+    }
+  }
+}
+
+.footer-navigation {
+  li {
+    display: inline-block;
+  }
+
+  a {
+    font-size: $fz-small;
+  }
+}
