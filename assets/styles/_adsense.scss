@@ -1,0 +1,15 @@
+@import 'theme';
+@import 'mixins';
+
+.adsense {
+  max-width: $max-width;
+  margin: 4rem auto;
+
+  > p {
+    color: $footer-text;
+  }
+
+  @include isMobile() {
+    padding: 1rem;
+  }
+}

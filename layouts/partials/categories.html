@@ -1,0 +1,7 @@
+<div class="categories">
+  <ul>
+    {{ range .Params.tags -}}
+    <li class="text-small"><a href="{{ print "/tags/" . | relURL }}/">{{ . }}</a></li>
+    {{ end -}}
+  </ul>
+</div>

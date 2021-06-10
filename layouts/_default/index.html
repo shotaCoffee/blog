@@ -1,0 +1,15 @@
+{{ define "title" }}
+{{- .Site.Title -}}
+{{ end }}
+
+{{ define "main" }}
+{{ "<!-- _default/index.html start -->" | safeHTML }}
+<div class="index">
+{{ range .Site.RegularPages -}}
+  {{ partial "card.html" . }}
+{{ end -}}
+</div>
+{{ partial "profile.html" . }}
+{{ partial "footer.html" . }}
+{{ "<!-- _default/index.html end -->" | safeHTML }}
+{{ end }}

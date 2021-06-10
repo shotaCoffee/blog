@@ -1,0 +1,19 @@
+@import 'theme';
+
+.privacyPolicy {
+  max-width: $max-width;
+  margin: 0 auto;
+
+  > main {
+    padding: 0 1rem;
+    margin: 4rem 0;
+  }
+
+  section + section {
+    margin-top: 1rem;
+  }
+
+  h2 + p {
+    margin-top: 1rem;
+  }
+}

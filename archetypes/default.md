@@ -1,15 +1,9 @@
-+++
-title = "Article title here"
-date = 2020-02-15T20:00:00+09:00
-tags = ["tags here"]
-draft = false
-toc = false
-backtotop = false
-disable_comments = true <!-- disable disqus -->
-+++
+---
+title: "Hello Hugo"
+date: 2021-06-09T22:20:54+09:00
+draft: false
+tags: ["hello", "hugo"]
+---
 
-# Title
+Hello Hugo
 
-<!-- when toc is true and post wordcounts is greater than 400 -->
-
-## Contents

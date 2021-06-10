@@ -1,0 +1,55 @@
+@import 'theme';
+@import 'mixins';
+
+:root {
+  --font-mono: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-size: $base-font-size;
+
+  @include isMobile() {
+    font-size: $base-font-size-mobile;
+  }
+}
+
+body {
+  @include base-font-style();
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  color: #000;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.4em;
+  tab-size: 4;
+  hyphens: none;
+}
+
+code[class*='language-css'] {
+  font-weight: 600;
+}
+
+pre :global(code) {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+code {
+  font-size: $fz-code;
+  background: #f1f1f1;
+  padding: 0.2rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+}

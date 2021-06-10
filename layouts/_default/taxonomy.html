@@ -1,0 +1,13 @@
+{{ define "title" }}
+{{- .Title -}}
+{{ end }}
+{{ define "main" }}
+{{ "<!-- _default/taxonomy.html start -->" | safeHTML }}
+{{ .Content }}
+<div class="index">
+{{ range .Pages -}}
+{{ partial "card.html" . }}
+{{ end -}}
+</div>
+{{ "<!-- _default/taxonomy.html end -->" | safeHTML }}
+{{ end }}

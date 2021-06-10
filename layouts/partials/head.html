@@ -1,0 +1,22 @@
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- <meta name="description" content={getDescription(description)} /> -->
+<meta property="og:locale" content="ja" />
+<!-- <meta property="og:title" content={getOgTitle(titlePre)} /> -->
+<!-- <meta property="og:site_name" content={getOgTitle(titlePre)} /> -->
+<!-- <meta property="og:image" content={getOgImage(ogImage)} /> -->
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="315" />
+<!-- <meta property="og:description" content={getDescription(description)} /> -->
+<meta property="og:type" content="website" />
+<!-- <meta property="og:url" content={getUrl(path)} /> -->
+<meta name="twitter:site" content="@shota_coffee" />
+<meta name="twitter:card" content="summary_large_image" />
+<!-- <meta name="twitter:image" content={getOgImage(ogImage)} /> -->
+<meta property="fb:app_id" content="2709602549147832" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+{{ $sass := resources.Get "styles/main.scss" }}
+{{ $style := $sass | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">

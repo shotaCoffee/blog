@@ -1,0 +1,94 @@
+@import 'theme';
+@import 'mixins';
+
+.blog {
+  max-width: $max-width;
+  margin: 0 auto 4rem;
+}
+
+.post {
+  max-width: $max-width;
+  margin: 2rem auto 4rem;
+  color: $text;
+
+  hr {
+    margin: 2rem auto 0.875rem auto;
+    width: 40%;
+    height: 1px;
+    background-color: $weak-blue;
+    border: none;
+  }
+
+  img {
+    margin-right: auto;
+    margin-left: auto;
+    object-fit: contain;
+
+    & + pre {
+      margin-top: 1rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  blockquote,
+  pre,
+  code {
+    /* 1.5em provides good vertical spacing ( = 150% of the font-size) */
+    margin-bottom: 1.5em;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.25;
+    & + p {
+      margin-top: 1.2rem;
+    }
+  }
+
+  ol,
+  ul {
+    list-style-position: inside;
+    margin-top: 2.5rem;
+
+    & + * {
+      margin-top: 1.5rem;
+    }
+
+    ul,
+    ol {
+      margin-left: 1rem;
+    }
+  }
+
+  @include isMobile() {
+    padding: 0 1rem;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    img {
+      min-width: 50%;
+      height: auto !important;
+    }
+  }
+
+  .asset-wrapper {
+    margin: 0;
+    width: 100% !important;
+
+    & + * {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.post-meta {
+  margin-top: 0.875rem;
+  display: flex;
+  justify-content: space-between;
+}

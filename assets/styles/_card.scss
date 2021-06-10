@@ -1,0 +1,36 @@
+@import 'theme';
+
+.card {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid $weak-blue;
+}
+
+.card-title {
+  line-height: 1;
+  color: $text;
+  cursor: pointer;
+  font-size: $fz-h5;
+
+  a {
+    cursor: pointer;
+    transition: color 300ms ease;
+
+    &:hover {
+      color: $light-blue;
+    }
+  }
+}
+
+.card-description {
+  color: $blue;
+}
+
+.card-meta {
+  margin-top: 0.875rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-posted {
+  color: $blue;
+}

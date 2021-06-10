@@ -1,16 +1,21 @@
 baseURL = "https://shota.coffee/"
 languageCode = "ja"
 title = "shotaCoffee"
-theme = "harbor"
-publishDir = "docs"
-canonifyurls = true
-paginate = 3
+#theme = "hugo-theme-codesign"
+#publishDir = "docs"
+contentDir = "post"
+#canonifyurls = true
+paginate = 8
 DefaultContentLanguage = "ja"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 hasCJKLanguage = true
 
 googleAnalytics = "UA-151064248-1"
+
+[taxonomies]
+tag = "tags"
+
 # and disqus too.
 # disqusShortName = "your disqusshortname"
 

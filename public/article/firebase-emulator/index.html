@@ -1,0 +1,71 @@
+<!doctype html><html><head><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta property="og:locale" content="ja"><meta property="og:image:width" content="600"><meta property="og:image:height" content="315"><meta property="og:type" content="website"><meta name=twitter:site content="@shota_coffee"><meta name=twitter:card content="summary_large_image"><meta property="fb:app_id" content="2709602549147832"><link rel=icon type=image/x-icon href=/favicon.ico><link rel=stylesheet href=https://shota.coffee/styles/main.css><meta charset=utf-8><title>Firebase Emulator を使ってローカル開発を捗らせる。</title><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-151064248-1','auto'),ga('send','pageview'))</script></head><body><header class=header><nav class=navigation><ul><li><a href=/>Top</a></li><li><a href=/article/>Article</a></li><li><a href=/tags/>Tags</a></li></ul></nav></header><div class=post><div class=post-meta><div class=posted>2020.12.07</div><div class=categories><ul><li class=text-small><a href=/tags/Firebase/>Firebase</a></li></ul></div></div><h2 id=前提>前提</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=color:#960050;background-color:#1e0010>-</span> <span style=color:#960050;background-color:#1e0010>firebase</span> <span style=color:#960050;background-color:#1e0010>のプロジェクトの初期化が終わっていること</span>
+<span style=color:#960050;background-color:#1e0010>-</span> <span style=color:#960050;background-color:#1e0010>firebase</span> <span style=color:#ae81ff>8.1</span><span style=color:#960050;background-color:#1e0010>.</span><span style=color:#ae81ff>2</span> <span style=color:#960050;background-color:#1e0010>以降</span>
+<span style=color:#960050;background-color:#1e0010>-</span> <span style=color:#960050;background-color:#1e0010>firebase-tools</span> <span style=color:#ae81ff>7.8</span><span style=color:#960050;background-color:#1e0010>.</span><span style=color:#ae81ff>0</span> <span style=color:#960050;background-color:#1e0010>以降</span>
+<span style=color:#960050;background-color:#1e0010>-</span> <span style=color:#960050;background-color:#1e0010>Java</span> <span style=color:#ae81ff>1.8</span> <span style=color:#960050;background-color:#1e0010>以降</span>
+<span style=color:#960050;background-color:#1e0010>-</span> <span style=color:#960050;background-color:#1e0010>node</span> <span style=color:#ae81ff>8.0</span> <span style=color:#960050;background-color:#1e0010>以降</span>
+</code></pre></div><h2 id=local-emulator-suite-を構成する>Local Emulator Suite を構成する</h2><ul><li><code>firebase init emulators</code></li></ul><p>以下のように firebase.json に emulator に関する設定が追加される</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=color:#e6db74>&#34;emulators&#34;</span><span style=color:#960050;background-color:#1e0010>:</span> {
+    <span style=color:#f92672>&#34;firestore&#34;</span>: {
+      <span style=color:#f92672>&#34;port&#34;</span>: <span style=color:#e6db74>&#34;8080&#34;</span>
+    },
+    <span style=color:#f92672>&#34;ui&#34;</span>: {
+      <span style=color:#f92672>&#34;enabled&#34;</span>: <span style=color:#66d9ef>true</span>,      <span style=color:#960050;background-color:#1e0010>//</span> <span style=color:#960050;background-color:#1e0010>Default</span> <span style=color:#960050;background-color:#1e0010>is</span> <span style=color:#960050;background-color:#1e0010>`true`</span>
+      <span style=color:#f92672>&#34;host&#34;</span>: <span style=color:#e6db74>&#34;localhost&#34;</span>,
+      <span style=color:#f92672>&#34;port&#34;</span>: <span style=color:#ae81ff>4000</span>          <span style=color:#960050;background-color:#1e0010>//</span> <span style=color:#960050;background-color:#1e0010>If</span> <span style=color:#960050;background-color:#1e0010>unspecified</span>, <span style=color:#960050;background-color:#1e0010>see</span> <span style=color:#960050;background-color:#1e0010>CLI</span> <span style=color:#960050;background-color:#1e0010>log</span> <span style=color:#960050;background-color:#1e0010>for</span> <span style=color:#960050;background-color:#1e0010>selected</span> <span style=color:#960050;background-color:#1e0010>port</span>
+    },
+    <span style=color:#f92672>&#34;auth&#34;</span>: {
+      <span style=color:#f92672>&#34;port&#34;</span>: <span style=color:#e6db74>&#34;9099&#34;</span>
+    },
+    <span style=color:#f92672>&#34;functions&#34;</span>: {
+      <span style=color:#f92672>&#34;port&#34;</span>: <span style=color:#e6db74>&#34;5001&#34;</span>
+    },
+    <span style=color:#f92672>&#34;database&#34;</span>: {
+      <span style=color:#f92672>&#34;port&#34;</span>: <span style=color:#e6db74>&#34;9000&#34;</span>
+    },
+    <span style=color:#f92672>&#34;pubsub&#34;</span>: {
+      <span style=color:#f92672>&#34;port&#34;</span>: <span style=color:#e6db74>&#34;8085&#34;</span>
+    }
+  }
+</code></pre></div><ul><li>生成された port を みに行くように firebase を initialize しているところなどで記述を追加する</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=color:#66d9ef>import</span> <span style=color:#a6e22e>firebase</span> <span style=color:#66d9ef>from</span> <span style=color:#e6db74>&#39;firebase&#39;</span>;
+
+<span style=color:#75715e>// 使うサービスによってここのパラメータはいらないものもあります。
+</span><span style=color:#75715e></span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>config</span> <span style=color:#f92672>=</span> {
+  <span style=color:#a6e22e>apiKey</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;YOUR_API_KEY&#39;</span>,
+  <span style=color:#a6e22e>authDomain</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;YOUR_AUTH_DOMAIN&#39;</span>,
+  <span style=color:#a6e22e>databaseURL</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;YOUR_DATABASE_URL&#39;</span>,
+  <span style=color:#a6e22e>projectId</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;YOUR_PROJECT_ID&#39;</span>,
+  <span style=color:#a6e22e>storageBucket</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;YOUR_STORAGE_BUCKET&#39;</span>,
+  <span style=color:#a6e22e>messagingSenderId</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;YOUR_MESSAGING_SENDER_ID&#39;</span>,
+  <span style=color:#a6e22e>appId</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;YOUR_APP_ID&#39;</span>,
+  <span style=color:#a6e22e>measurementId</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;YOUR_MEASUREMENT_ID&#39;</span>
+};
+
+<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>app</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>firebase</span>.<span style=color:#a6e22e>initializeApp</span>(<span style=color:#a6e22e>config</span>);
+
+<span style=color:#66d9ef>export</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>auth</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>app</span>.<span style=color:#a6e22e>auth</span>();
+<span style=color:#66d9ef>export</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>db</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>app</span>.<span style=color:#a6e22e>database</span>();
+<span style=color:#66d9ef>export</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>store</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>app</span>.<span style=color:#a6e22e>firestore</span>();
+
+<span style=color:#75715e>/*
+</span><span style=color:#75715e> * ここで簡単に環境を切り替えるようにしていますが、
+</span><span style=color:#75715e> * 起動時に環境変数を用いて切り替える方でもいいです。
+</span><span style=color:#75715e> */</span> 
+<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>isEmulating</span> <span style=color:#f92672>=</span> window.<span style=color:#a6e22e>location</span>.<span style=color:#a6e22e>hostname</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;localhost&#39;</span>;
+
+<span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>isEmulating</span>) {
+  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;Firestore using local emulator&#39;</span>);
+  <span style=color:#75715e>// fire store の host の向き先、ここは設定した port を指定してください
+</span><span style=color:#75715e></span>  <span style=color:#a6e22e>store</span>.<span style=color:#a6e22e>settings</span>({
+    <span style=color:#a6e22e>host</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;localhost:8080&#39;</span>,
+    <span style=color:#a6e22e>ssl</span>: <span style=color:#66d9ef>false</span>
+  });
+  <span style=color:#75715e>// realtime database の向き先、ここは設定した port を指定してください
+</span><span style=color:#75715e></span>  <span style=color:#a6e22e>db</span>.<span style=color:#a6e22e>useEmulator</span>(<span style=color:#e6db74>&#39;localhost&#39;</span>, <span style=color:#ae81ff>9000</span>);
+  <span style=color:#75715e>// authentication  の向き先、ここは設定した port を指定してください
+</span><span style=color:#75715e></span>  <span style=color:#a6e22e>auth</span>.<span style=color:#a6e22e>useEmulator</span>(<span style=color:#e6db74>&#39;http://localhost:9099/&#39;</span>);
+}
+</code></pre></div><p>整理したデフォルト port 一覧はこちら</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=color:#f92672>|</span> <span style=color:#ae81ff>9099</span> <span style=color:#f92672>|</span> <span style=color:#a6e22e>firebase</span> <span style=color:#a6e22e>Auth</span> <span style=color:#f92672>|</span>
+<span style=color:#f92672>|</span> <span style=color:#ae81ff>8080</span> <span style=color:#f92672>|</span> <span style=color:#a6e22e>firestore</span> <span style=color:#f92672>|</span>
+<span style=color:#f92672>|</span> <span style=color:#ae81ff>9000</span> <span style=color:#f92672>|</span> <span style=color:#a6e22e>database</span> <span style=color:#f92672>|</span>
+<span style=color:#f92672>|</span> <span style=color:#ae81ff>5000</span> <span style=color:#f92672>|</span> <span style=color:#a6e22e>hosting</span> <span style=color:#f92672>|</span>
+<span style=color:#f92672>|</span> <span style=color:#ae81ff>8081</span> <span style=color:#f92672>|</span> <span style=color:#a6e22e>firebase</span> <span style=color:#a6e22e>ui</span> <span style=color:#f92672>|</span>
+</code></pre></div><h2 id=起動する>起動する</h2><p><code>firebase emulators:start</code></p><p>自分の場合は npm script にこんな感じで追加してます。</p><p><code>"firebase-local": "firebase emulators:start"</code></p><p>すると <a href=http://localhost:8081/><code>http://localhost:8081/</code></a> でローカルの firebase が立ち上がります</p><p><img src=images/Untitled.png alt=images/Untitled.png></p><p>あとは、いつも通り開発するだけです。</p><p>これのおかげで本番データを気にせず、ローカル開発ができるようになりました。👏</p><h3 id=参考>参考</h3><ul><li><a href=https://firebase.google.com/docs/emulator-suite>https://firebase.google.com/docs/emulator-suite</a></li><li><a href=https://firebase.google.com/docs/emulator-suite/install_and_configure>https://firebase.google.com/docs/emulator-suite/install_and_configure</a></li><li><a href=https://gist.github.com/jaytaylor/b14716671ae6a8cd057bd6d849670238>https://gist.github.com/jaytaylor/b14716671ae6a8cd057bd6d849670238</a></li></ul></div></body></html>
