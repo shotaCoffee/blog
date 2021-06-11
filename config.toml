@@ -1,10 +1,8 @@
 baseURL = "https://shota.coffee/"
 languageCode = "ja"
 title = "shotaCoffee"
-#theme = "hugo-theme-codesign"
 publishDir = "docs"
 contentDir = "post"
-#canonifyurls = true
 paginate = 3
 DefaultContentLanguage = "ja"
 enableInlineShortcodes = true
@@ -15,84 +13,3 @@ googleAnalytics = "UA-151064248-1"
 
 [taxonomies]
 tag = "tags"
-
-# and disqus too.
-# disqusShortName = "your disqusshortname"
-
-# [params.goatcounter]
-#   domain="stats.domain.com"
-
-# [params.matomo]
-#   domain="stats.domain.com"
-#   id="123"
-
-# [Author]
-#   name = "Hugo Author"
-
-# [outputs]
-#   section = ["JSON", "HTML"]
-
-# [[params.nav]]
-#   identifier = "about"
-#   name = "About"
-#   icon = "fas fa-user fa-lg"
-#   url = "/about/"
-#   weight = 3
-
-# [[params.nav]]
-#   identifier = "tags"
-#   name = "Tags"
-#   icon = "fas fa-tag fa-lg"
-#   url = "tags"
-#   weight = 3
-
-# [[params.nav]]
-#   identifier = "categories"
-#   name = "Category"
-#   icon = "fas fa-folder-open fa-lg"
-#   url = "categories"
-#   weight = 3
-
-# [[params.nav]]
-#   identifier = "search"
-#   name = "Search"
-#   icon = "fas fa-search fa-lg"
-#   url = "search"
-#   weight = 3
-
-# [[params.nav]]
-#   identifier = "archives"
-#   name = "Archives"
-#   icon = "fas fa-archive fa-lg"
-#   url = "archives"
-#   weight = 3
-
-
-[[params.social]]
-name= "Twitter"
-url="https://twitter.com/shota_coffee"
-icon="fab fa-twitter"
-
-[[params.social]]
-name= "GitHub"
-url="https://github.com/shotaCoffee"
-icon="fab fa-github"
-
-[[params.social]]
-name= "facebook"
-url="https://www.facebook.com/shotaCoffee"
-icon="fab fa-facebook"
-
-[[params.social]]
-name= "linkedin"
-url="https://www.linkedin.com/in/shota-murakami-40362011b/"
-icon="fab fa-linkedin"
-
-[params]
-favicon = "favicon.ico"
-
-[params.logo]
-url = "logo.svg"
-width = 50
-height = 50
-alt = "Logo"

@@ -20,7 +20,7 @@ carduse: true
 
 ## 10年前の目標をコンプリートした
 
-![images/Untitled.png](images/Untitled.png)
+![images/Untitled.png](./images/Untitled.png)
 
 18歳くらいの時にたてた目標を無事にハイ達成しました。
 
@@ -28,9 +28,9 @@ carduse: true
 
 ## めちゃくちゃコード書いた
 
-![images/Untitled%201.png](images/Untitled%201.png)
+![images/Untitled%201.png](images/Untitled 1.png)
 
-![images/Untitled%202.png](images/Untitled%202.png)
+![images/Untitled%202.png](images/Untitled 2.png)
 
 短期間で割と猛烈に書き上げました。
 
