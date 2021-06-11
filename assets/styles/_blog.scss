@@ -23,6 +23,7 @@
     margin-right: auto;
     margin-left: auto;
     object-fit: contain;
+    max-width: 100%;
 
     & + pre {
       margin-top: 1rem;
@@ -37,8 +38,16 @@
   blockquote,
   pre,
   code {
+    background-color: $code-bg;
+    color: #fff;
     /* 1.5em provides good vertical spacing ( = 150% of the font-size) */
     margin-bottom: 1.5em;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display:none;
+    }
   }
 
   p {
