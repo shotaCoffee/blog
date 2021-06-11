@@ -10,8 +10,8 @@
   <meta property="og:description" content="shotaCoffeeのブログです" />
 {{ if eq true .Params.carduse }}
 {{"<!-- blog og -->" |safeHTML}}
-  <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.ogimage }}">
-  <meta name="twitter:image:src" content="{{ .Site.BaseURL }}{{ .Params.ogimage }}">
+  <meta property="og:image" content="https://shota.coffee{{ .Params.ogimage }}">
+  <meta name="twitter:image:src" content="https://shota.coffee{{ .Params.ogimage }}">
   <meta property="og:title" content="{{ .Params.title }} | codesign" />
   <meta property="og:site_name" content="{{ .Params.title }} | codesign" />
   <meta name="description" content="" />
@@ -32,4 +32,3 @@
 {{ $sass := resources.Get "styles/main.scss" }}
 {{ $style := $sass | resources.ToCSS }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
-
