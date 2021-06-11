@@ -238,7 +238,8 @@ small,
   .post img {
     margin-right: auto;
     margin-left: auto;
-    object-fit: contain; }
+    object-fit: contain;
+    max-width: 100%; }
     .post img + pre {
       margin-top: 1rem; }
   .post a {
@@ -247,8 +248,17 @@ small,
   .post blockquote,
   .post pre,
   .post code {
+    background-color: #4e4e4e;
+    color: #fff;
     /* 1.5em provides good vertical spacing ( = 150% of the font-size) */
-    margin-bottom: 1.5em; }
+    margin-bottom: 1.5em;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none; }
+    .post blockquote::-webkit-scrollbar,
+    .post pre::-webkit-scrollbar,
+    .post code::-webkit-scrollbar {
+      display: none; }
   .post p {
     font-size: 1.125rem;
     line-height: 1.25; }
@@ -540,7 +550,7 @@ small,
 
 .navigation {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   max-width: 42rem;
   margin: 0 auto;
   padding: 0.875rem 1rem;
@@ -549,10 +559,14 @@ small,
     display: flex;
     justify-content: flex-start;
     align-items: center; }
-  .navigation h1 {
+  .navigation ul, .navigation li {
     line-height: 1; }
-    .navigation h1:hover {
-      cursor: pointer; }
+  .navigation h1 {
+    line-height: 1;
+    margin-left: 1rem;
+    margin-bottom: 0;
+    padding-bottom: 4px;
+    font-weight: 200; }
   .navigation li {
     display: inline-block; }
     .navigation li + li {
@@ -806,161 +820,4 @@ small,
   .pagination li.disabled a {
     color: #dff0f9; }
 
-/*
-Night Owl for highlight.js (c) Carl Baxter <carl@cbax.tech>
-An adaptation of Sarah Drasner's Night Owl VS Code Theme
-https://github.com/sdras/night-owl-vscode-theme
-Copyright (c) 2018 Sarah Drasner
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-*/
-.hljs {
-  background: #011627;
-  color: #d6deeb; }
-
-/* General Purpose */
-.hljs-keyword {
-  color: #c792ea;
-  font-style: italic; }
-
-.hljs-built_in {
-  color: #addb67;
-  font-style: italic; }
-
-.hljs-type {
-  color: #82aaff; }
-
-.hljs-literal {
-  color: #ff5874; }
-
-.hljs-number {
-  color: #F78C6C; }
-
-.hljs-regexp {
-  color: #5ca7e4; }
-
-.hljs-string {
-  color: #ecc48d; }
-
-.hljs-subst {
-  color: #d3423e; }
-
-.hljs-symbol {
-  color: #82aaff; }
-
-.hljs-class {
-  color: #ffcb8b; }
-
-.hljs-function {
-  color: #82AAFF; }
-
-.hljs-title {
-  color: #DCDCAA;
-  font-style: italic; }
-
-.hljs-params {
-  color: #7fdbca; }
-
-/* Meta */
-.hljs-comment {
-  color: #637777;
-  font-style: italic; }
-
-.hljs-doctag {
-  color: #7fdbca; }
-
-.hljs-meta {
-  color: #82aaff; }
-
-.hljs-meta .hljs-keyword {
-  color: #82aaff; }
-
-.hljs-meta .hljs-string {
-  color: #ecc48d; }
-
-/* Tags, attributes, config */
-.hljs-section {
-  color: #82b1ff; }
-
-.hljs-tag,
-.hljs-name {
-  color: #7fdbca; }
-
-.hljs-attr {
-  color: #7fdbca; }
-
-.hljs-attribute {
-  color: #80cbc4; }
-
-.hljs-variable {
-  color: #addb67; }
-
-/* Markup */
-.hljs-bullet {
-  color: #d9f5dd; }
-
-.hljs-code {
-  color: #80CBC4; }
-
-.hljs-emphasis {
-  color: #c792ea;
-  font-style: italic; }
-
-.hljs-strong {
-  color: #addb67;
-  font-weight: bold; }
-
-.hljs-formula {
-  color: #c792ea; }
-
-.hljs-link {
-  color: #ff869a; }
-
-.hljs-quote {
-  color: #697098;
-  font-style: italic; }
-
-/* CSS */
-.hljs-selector-tag {
-  color: #ff6363; }
-
-.hljs-selector-id {
-  color: #fad430; }
-
-.hljs-selector-class {
-  color: #addb67;
-  font-style: italic; }
-
-.hljs-selector-attr,
-.hljs-selector-pseudo {
-  color: #c792ea;
-  font-style: italic; }
-
-/* Templates */
-.hljs-template-tag {
-  color: #c792ea; }
-
-.hljs-template-variable {
-  color: #addb67; }
-
-/* diff */
-.hljs-addition {
-  color: #addb67ff;
-  font-style: italic; }
-
-.hljs-deletion {
-  color: #EF535090;
-  font-style: italic; }
+@import "highlight-monokai.css";
