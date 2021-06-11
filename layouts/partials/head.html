@@ -2,8 +2,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 {{"<!-- TwitterCard config -->" |safeHTML}}
-  <meta name="twitter:image:src" content="https://shota.coffee/images/default-og-img.png">
-  <meta property="og:image" content="https://shota.coffee/images/default-og-img.png" />
+  <meta name="twitter:image:src" content="https://shota.coffee/images/og/default-og-img.png">
+  <meta property="og:image" content="https://shota.coffee/images/og/default-og-img.png" />
   <meta property="og:title" content="codesign" />
   <meta property="og:site_name" content="codesign" />
   <meta name="description" content="shotaCoffeeのブログです" />
@@ -32,3 +32,4 @@
 {{ $sass := resources.Get "styles/main.scss" }}
 {{ $style := $sass | resources.ToCSS }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
+
