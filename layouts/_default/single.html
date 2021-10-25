@@ -12,5 +12,7 @@
     </div>
     {{ .Content }}
   </div>
+{{ partial "profile.html" . }}
+{{ partial "footer.html" . }}
 {{ "<!-- _default/single.html end -->" | safeHTML }}
 {{ end }}

@@ -28,9 +28,9 @@ carduse: true
 
 ## めちゃくちゃコード書いた
 
-![images/Untitled%201.png](images/Untitled 1.png)
+![images/1.png](images/1.png)
 
-![images/Untitled%202.png](images/Untitled 2.png)
+![images/2.png](images/2.png)
 
 短期間で割と猛烈に書き上げました。
 
@@ -52,7 +52,7 @@ carduse: true
 
 コンパイルの時間を減らしたり、いろんなアップデートを行ったり。
 
-![images/Untitled%203.png](images/Untitled%203.png)
+![images/3.png](images/3.png)
 
 主な成果はコンパイル速度を 1/3 にできたことや、カオスなwebpackをきれいにして色々やったとか、lint を整えるだとか、そういう根底の部分にも力を注ぎ始めた。
 
@@ -85,7 +85,7 @@ etc...
 
 ## 最後に
 
-![images/Untitled%204.png](images/Untitled%204.png)
+![images/4.png](images/4.png)
 
 しっかり今月までは2をやれてる感じ、3も予定を組んで実行し始めた。1がやばい。
 
