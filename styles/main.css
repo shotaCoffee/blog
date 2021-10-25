@@ -275,7 +275,14 @@ small,
     .post ol ol,
     .post ul ul,
     .post ul ol {
+      margin-top: 0.5rem;
       margin-left: 1rem; }
+    .post ol li + li,
+    .post ul li + li {
+      margin-top: 1rem; }
+    .post ol + p,
+    .post ul + p {
+      margin-top: 1.5rem; }
   @media screen and (max-width: 414px) {
     .post {
       padding: 0 1rem; }
@@ -294,6 +301,10 @@ small,
   margin-top: 0.875rem;
   display: flex;
   justify-content: space-between; }
+
+.twitter-tweet {
+  margin-left: auto;
+  margin-right: auto; }
 
 p {
   margin-bottom: 1.15rem; }

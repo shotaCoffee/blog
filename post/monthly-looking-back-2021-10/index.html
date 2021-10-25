@@ -1,0 +1,138 @@
+<!doctype html><html>
+<head>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=twitter:image:src content="https://shota.coffee/images/og/default-og-img.png">
+<meta property="og:image" content="https://shota.coffee/images/og/default-og-img.png">
+<meta property="og:title" content="codesign">
+<meta property="og:site_name" content="codesign">
+<meta name=description content="shotaCoffeeのブログです">
+<meta property="og:description" content="shotaCoffeeのブログです">
+<meta property="og:image" content="https://shota.coffee/images/og/monthly-looking-back-2021-10.png">
+<meta name=twitter:image:src content="https://shota.coffee/images/og/monthly-looking-back-2021-10.png">
+<meta property="og:title" content="2021年10月までの振り返り | codesign">
+<meta property="og:site_name" content="2021年10月までの振り返り | codesign">
+<meta name=description content>
+<meta property="og:description" content>
+<meta property="og:locale" content="ja">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="315">
+<meta property="og:type" content="website">
+<meta name=twitter:site content="@shota_coffee">
+<meta name=twitter:card content="summary_large_image">
+<meta property="fb:app_id" content="2709602549147832">
+<link rel=icon type=image/x-icon href=/favicon.ico>
+<link rel=stylesheet href=https://shota.coffee/styles/main.css>
+<meta charset=utf-8>
+<title>2021年10月までの振り返り</title>
+</head>
+<body>
+<header class=header>
+<nav class=navigation>
+<ul>
+<li>
+<a href=/>
+<img src=/images/logo.svg alt=codesign>
+</a>
+</li>
+</ul>
+<h1>codesign</h1>
+</nav>
+</header>
+<div class=post>
+<h2>2021年10月までの振り返り</h2>
+<div class=post-meta>
+<div class=posted>2021.10.25</div>
+<div class=categories>
+<ul>
+<li class=text-small><a href=/tags/%e6%a3%9a%e5%8d%b8%e3%81%97/>棚卸し</a></li>
+</ul>
+</div>
+</div>
+<h2 id=スプラが初エリア-s-になった>スプラが初エリア S+ になった</h2>
+<p>X なお兄さん方に囲まれながらリグマで鍛えられた。<br>
+初めてパワー2000超えの試合にも勝った。<br>
+ブキは黒 ZAP をメインに、ステージによってプライムを持ってます。<br>
+たまに遊びで筆持ってるけど、筆も楽しい。</p>
+<h2 id=フロントエンド周りの技術移行開始>フロントエンド周りの技術移行開始</h2>
+<p>リプレイスプロジェクトが動き始めた。<br>
+メンバーと一緒にアーキテクチャを考えたり、Lint/Format を始めとした社内用の小さいライブラリを構築したり。<br>
+作ったあと <a href=https://zenn.dev/yoshiko/articles/0994f518015c04>この記事</a> が出て、改善したい気持ちが高まってたり。<br>
+半ばでメンバーが増えてオンボーディング戦略考えたり、ペアプロしたり。
+目下テスト周りを手を動かしながら考えたり。ドキュメント整えたり、
+画面単位機能単位と、リリースしています。（またこれは別で何か書くかもしれない）</p>
+<h2 id=サービスを1つリリースしました>サービスを1つリリースしました</h2>
+<p><img src=images/1.jpg alt=images/1.jpg>
+<a href=https://www.bouquet-music.net/>bouquet</a> という音楽ニュースレターアプリをリリースしました。<br>
+バックエンドの方がお手伝いとしてきてくださり。みんなで草ベンチャー状態ですが、「音楽」をテーマに試していけたらなと思ってます。
+技術的なところはこんな感じで実現しています。</p>
+<pre tabindex=0><code>- React
+- AWS Amplify
+  - cognito
+  - AppSync
+  - Dynamo
+  - lambda
+- Stripe
+- SendGrid  
+</code></pre><p>とてもシンプルになるべく薄く書いてます。<br>
+初めてプロダクションコードに GraphQL を使ってみたかもしれない。<br>
+楽しかったのでここは他のことでも使っていきたい。</p>
+<p>開発周りの話は、コンポーネント駆動開発しつつ（割としっかり Storybook 書いたり）、インフラ周りは全て Amplify に。<br>
+また、やってく中で「この Hooks また書いてるな」ってのが増えてきたので、少しずつ OSS として切り出しちゃおうということで、
+<a href=https://www.npmjs.com/package/@shotacoffee/utilhooks>npm パッケージ</a> として公開しました。<br>
+リポジトリは <a href=https://github.com/shotaCoffee/util-hooks>こちら</a> issue 投げていただいたり、
+これよく使うんだよねっていうのがあれば PR 投げていただければと思います（まだそこら辺何も整えてないですが）</p>
+<h2 id=今年の目標について>今年の目標について</h2>
+<blockquote class=twitter-tweet><p lang=ja dir=ltr>2021 目標（仮）<br>テーマ +1<br><br>1. 健康<br>絞る、足腰強くしていきたい。山登りたい<br><br>2. 技術は深さと広さの両立<br>去年自分で言い出したプロジェクトをやりきり最高の環境を作る。本業以外のものも順次アウトプットしていく<br><br>3. 将来への投資と実行<br>引っ越したいし色々と人生を進めていく</p>&mdash; shotaCoffee (@shota_coffee) <a href="https://twitter.com/shota_coffee/status/1344671488553570304?ref_src=twsrc%5Etfw">December 31, 2020</a></blockquote>
+<script async src=https://platform.twitter.com/widgets.js></script>
+<h3 id=健康-x2614>健康 ☔</h3>
+<p>ほんと何もできてないし、むしろ寝つき悪くなってよくない。<br>
+基本 30 分おきに立って仕事するようにしてるものの、運動が足りてない感じ。要改善</p>
+<h3 id=技術の深さと広さの両立-x26c5>技術の深さと広さの両立 ⛅</h3>
+<p>新しいものに触れられてないので、残りの時間で普段触らないものに触れていきたいところ、 JVM 系と何かは触りたい。<br>
+深さはチームメイトとともに、海外記事を漁りつつ手を動かしながら考えたり、個人開発であれこれと試したりできてるのでOK</p>
+<h3 id=投資-x2600>投資 ☀</h3>
+<p>年始から初めてコツコツと、ポイント運用なども合わせると割といい感じになってきた。<br>
+技術と同じように小さく初めて振り返りつつ何をやるとどうなるのか。<br>
+どう対策しておくといいのか、みたいなのをコツコツ積み重ねれている感じ。<br>
+この点に関しては、個人的な興味も前々からあったのもあって楽しい。</p>
+</div>
+<section class=profile-wrap>
+<div class=profile>
+<h2 class=profile-heading>Profile</h2>
+<div class=profile-contents>
+<div class=profile-avatar>
+<img src=/images/avatar.jpg alt=shotaCoffee>
+</div>
+<div class=profile-description>
+<h2>shotaCoffee</h2>
+<p>Frontend Engineer</p>
+<p>音楽とコーヒーが好きなフロントエンド中心のエンジニア</p>
+<ul class=profile-sns>
+<li>
+<a href=https://twitter.com/shota_coffee rel=noopener target=_blank>
+<img src=/images/logo-twitter.svg alt=Twitter>
+</a>
+</li>
+<li>
+<a href=https://github.com/shotaCoffee rel=noopener target=_blank>
+<img src=/images/logo-github.svg alt=GitHub>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<footer class=footer>
+<p>
+<a href=/>codesign</a>
+</p>
+<ul class=footer-navigation>
+<li>
+<a href=/privacy-policy>プライバシーポリシー</a>
+</li>
+</ul>
+</footer>
+</body>
+</html>
