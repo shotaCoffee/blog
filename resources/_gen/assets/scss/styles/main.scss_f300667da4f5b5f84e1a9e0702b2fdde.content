@@ -1,3 +1,4 @@
+@charset "UTF-8";
 p {
   margin-bottom: 1.15rem; }
 
@@ -143,7 +144,7 @@ small,
   font-size: 0.833em; }
 
 .about {
-  max-width: 42rem;
+  max-width: 45rem;
   margin: 6rem auto 1.5rem; }
   .about h1 {
     text-align: center;
@@ -182,7 +183,7 @@ small,
   font-size: 0.833em; }
 
 .adsense {
-  max-width: 42rem;
+  max-width: 45rem;
   margin: 4rem auto; }
   .adsense > p {
     color: #a7b5ba; }
@@ -222,11 +223,11 @@ small,
   font-size: 0.833em; }
 
 .blog {
-  max-width: 42rem;
+  max-width: 45rem;
   margin: 0 auto 4rem; }
 
 .post {
-  max-width: 42rem;
+  max-width: 45rem;
   margin: 2rem auto 4rem;
   color: #616e72; }
   .post hr {
@@ -266,8 +267,19 @@ small,
       margin-top: 1.2rem; }
   .post ol,
   .post ul {
-    list-style-position: inside;
     margin-top: 2.5rem; }
+    .post ol li,
+    .post ul li {
+      position: relative; }
+      .post ol li::marker,
+      .post ul li::marker {
+        font-size: 0; }
+      .post ol li::before,
+      .post ul li::before {
+        position: absolute;
+        left: -16px;
+        top: 0;
+        content: '・'; }
     .post ol + *,
     .post ul + * {
       margin-top: 1.5rem; }
@@ -301,6 +313,8 @@ small,
   margin-top: 0.875rem;
   display: flex;
   justify-content: space-between; }
+  .post-meta li::before {
+    display: none; }
 
 .twitter-tweet {
   margin-left: auto;
@@ -444,7 +458,7 @@ small,
   font-size: 0.833em; }
 
 .contact {
-  max-width: 42rem;
+  max-width: 45rem;
   margin: 6rem auto 8rem; }
   .contact h1 {
     text-align: center;
@@ -507,7 +521,7 @@ small,
   font-size: 0.833em; }
 
 .footer {
-  max-width: 42rem;
+  max-width: 45rem;
   padding: 1.8rem 1rem;
   margin: 4rem auto 0;
   color: #a7b5ba;
@@ -562,7 +576,7 @@ small,
 .navigation {
   display: flex;
   justify-content: flex-start;
-  max-width: 42rem;
+  max-width: 45rem;
   margin: 0 auto;
   padding: 0.875rem 1rem;
   align-items: center; }
@@ -622,7 +636,7 @@ small,
   font-size: 0.833em; }
 
 .index {
-  max-width: 42rem;
+  max-width: 45rem;
   margin: 0 auto 6rem; }
 
 p {
@@ -658,7 +672,7 @@ small,
   font-size: 0.833em; }
 
 .privacyPolicy {
-  max-width: 42rem;
+  max-width: 45rem;
   margin: 0 auto; }
   .privacyPolicy > main {
     padding: 0 1rem;
@@ -674,7 +688,7 @@ small,
 
 .profile-contents {
   padding: 0 1.75rem 4.8125rem;
-  max-width: 42rem;
+  max-width: 45rem;
   margin: 1.5rem auto 0;
   display: flex;
   justify-content: flex-start; }
@@ -683,7 +697,7 @@ small,
       flex-direction: column;
       align-items: center; } }
 .profile-heading {
-  max-width: 42rem;
+  max-width: 45rem;
   margin: 0 auto;
   padding: 1.75rem 1rem 0; }
 

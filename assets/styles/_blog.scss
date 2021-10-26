@@ -60,8 +60,19 @@
 
   ol,
   ul {
-    list-style-position: inside;
     margin-top: 2.5rem;
+    li {
+      position: relative;
+      &::marker {
+        font-size: 0;
+      }
+      &::before {
+        position: absolute;
+        left: -16px;
+        top: 0;
+        content: '・';
+      }
+    }
 
     & + * {
       margin-top: 1.5rem;
@@ -109,6 +120,12 @@
   margin-top: 0.875rem;
   display: flex;
   justify-content: space-between;
+
+  li {
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .twitter-tweet {
