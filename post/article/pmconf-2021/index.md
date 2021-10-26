@@ -70,7 +70,7 @@ Twitter でイベント参加者や登壇者の方々をまとめたリストは
 - VUCA時代のプロダクト開発 - ユーザに寄り添う『PLO（Product-led Organization) - プロダクトデータを軸とした顧客中心組織』とは？
 - [“数が神より正しい” の会社が定性的な仮説を取り入れていく試行錯誤の話](https://speakerdeck.com/aratam/pmconf2021-shu-gashen-yorizheng-sii-hui-she-gading-xing-de-najia-shuo-woqu-riru-reteikushi-xing-cuo-wu-falsehua)
 - [プロダクトロードマップをビジュアライズし、非連続な変化を分かち合う](https://speakerdeck.com/yta026/xica-productroadmap-visualization)
-- SaaSにおけるOKRの運用
+- [SaaSにおけるOKRの運用](https://speakerdeck.com/zenkou_1211/saasniokeruokrfalseyun-yong)
 
 ### その他
 発表終了後、発表内容の補足的に展開された情報など
@@ -78,3 +78,5 @@ Twitter でイベント参加者や登壇者の方々をまとめたリストは
 - [pmconf2021発表内容の補足とかいろいろ_受託開発に強い会社が、新規プロダクトをリリースし、短期間で撤退判断に至った失敗談、赤裸々に全部話します。](https://tech.fusic.co.jp/posts/2021-10-26-pmconf2021/)
 - [東京大学 FoundX の 馬田さん](https://speakerdeck.com/tumada)
 - [解像度を高める](https://speakerdeck.com/tumada/jie-xiang-du-wogao-meru)
+- [肉厚な「仮説のミルフィーユ」をつくる](https://note.com/ozyozyo/n/n5362f89f283c)
+- [おすすめ書籍まとめ](https://twitter.com/nerd0geek1/status/1452828910282969088)
