@@ -47,7 +47,7 @@ Twitter でイベント参加者や登壇者の方々をまとめたリストは
 - 愛されるSlack Bot「Colla」さんのProduct-led Growthを支えるUXライティング
 - [すべてのPMに学びの場を](https://speakerdeck.com/maidol/20211026-pmconf2021-subetefalsepmnixue-bifalsechang-wo)
 - 多文化向けプロダクト開発の経験より得たこと
-- M&A と内製プロダクト、どちらを選択する？ ~STORESは、なぜ予約プロダクトはM&Aで、POSレジプロダクトは内製をしたのか~
+- [M&A と内製プロダクト、どちらを選択する？ ~STORESは、なぜ予約プロダクトはM&Aで、POSレジプロダクトは内製をしたのか~](https://speakerdeck.com/ayanadesu/m-and-a-tonei-zhi-purodakuto-dotirawoxuan-ze-suru-storesha-nazeyu-yue-purodakutoham-and-ade-posrezipurodakutohanei-zhi-wositafalseka-number-pmconf2021)
 
 ### TrackD
 - プロダクトマネージャー自身の非連続な成長とそれを実現するキャリア構築とは？
