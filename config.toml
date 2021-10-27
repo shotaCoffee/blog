@@ -24,7 +24,7 @@ pygmentsUseClasses = true
         style = "monokai"
         tabWidth = 2
 
-googleAnalytics = "UA-151064248-1"
+googleAnalytics = ""
 
 [taxonomies]
 tag = "tags"

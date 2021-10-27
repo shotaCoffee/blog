@@ -32,3 +32,6 @@
 {{ $sass := resources.Get "styles/main.scss" }}
 {{ $style := $sass | resources.ToCSS }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
+{{ if not .Site.IsServer }}
+{{ partial "analytics" . }}
+{{ end }}
