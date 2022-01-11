@@ -264,36 +264,37 @@ small,
     font-size: 1.125rem;
     line-height: 1.25; }
     .post p + p {
-      margin-top: 1.2rem; }
-  .post ol,
-  .post ul {
-    margin-top: 2.5rem; }
-    .post ol li,
-    .post ul li {
+      margin-top: 1.5rem; }
+  .post > ol,
+  .post > ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem; }
+    .post > ol li,
+    .post > ul li {
       position: relative; }
-      .post ol li::marker,
-      .post ul li::marker {
+      .post > ol li::marker,
+      .post > ul li::marker {
         font-size: 0; }
-      .post ol li::before,
-      .post ul li::before {
+      .post > ol li::before,
+      .post > ul li::before {
         position: absolute;
         left: -16px;
         top: 0;
         content: '・'; }
-    .post ol + *,
-    .post ul + * {
+    .post > ol + *,
+    .post > ul + * {
       margin-top: 1.5rem; }
-    .post ol ul,
-    .post ol ol,
-    .post ul ul,
-    .post ul ol {
+    .post > ol ul,
+    .post > ol ol,
+    .post > ul ul,
+    .post > ul ol {
       margin-top: 0.5rem;
       margin-left: 1rem; }
-    .post ol li + li,
-    .post ul li + li {
-      margin-top: 1rem; }
-    .post ol + p,
-    .post ul + p {
+    .post > ol li + li,
+    .post > ul li + li {
+      margin-top: .5rem; }
+    .post > ol + p,
+    .post > ul + p {
       margin-top: 1.5rem; }
   @media screen and (max-width: 414px) {
     .post {
