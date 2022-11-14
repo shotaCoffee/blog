@@ -1,0 +1,28 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "post": "sh scripts/initPost.sh",
+    "dev": "hugo server -D",
+    "start": "hugo server",
+    "build": "hugo --minify",
+    "gen:ogp": "sh makeogp.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shotaCoffee/blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shotaCoffee/blog/issues"
+  },
+  "homepage": "https://github.com/shotaCoffee/blog#readme"
+}
+
